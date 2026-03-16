@@ -1,258 +1,311 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
+
 <meta charset="UTF-8">
-<title>Cambio de Frenos en un Taller Mecánico</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sonotone G's</title>
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
+*{
 margin:0;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#111;
+color:white;
 }
 
 header{
-background:#222;
-color:white;
+background:#000;
 padding:20px;
-text-align:center;
+display:flex;
+justify-content:space-between;
+}
+
+nav a{
+margin-left:20px;
+cursor:pointer;
+text-decoration:none;
+color:white;
 }
 
 section{
-background:white;
-margin:20px;
+display:none;
+padding:80px 10%;
+min-height:100vh;
+}
+
+.active{
+display:block;
+}
+
+/* fondos */
+
+#inicio{
+background:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70") center/cover;
+text-align:center;
+}
+
+#empresa{
+background:url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc") center/cover;
+}
+
+#serveis{
+background:url("https://images.unsplash.com/photo-1580273916550-e323be2ae537") center/cover;
+}
+
+#cita{
+background:url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3") center/cover;
+}
+
+#contacte{
+background:url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7") center/cover;
+}
+
+/* serveis */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:rgba(0,0,0,0.7);
 padding:20px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+cursor:pointer;
 }
 
-h2{
-color:#333;
-border-bottom:2px solid #ddd;
-padding-bottom:5px;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
+.card p{
+display:none;
 margin-top:10px;
 }
 
-th,td{
-border:1px solid #ddd;
-padding:8px;
-text-align:left;
+.card.active p{
+display:block;
 }
 
-th{
-background:#333;
+/* form */
+
+form{
+background:rgba(0,0,0,0.7);
+padding:30px;
+border-radius:10px;
+max-width:500px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:12px;
+background:red;
+border:none;
 color:white;
+cursor:pointer;
+width:100%;
 }
 
-.paso{
-margin-bottom:15px;
-}
+/* resum cita */
 
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:20px;
+#confirmacio{
+background:#000;
+padding:40px;
+margin-top:30px;
+border-radius:10px;
+display:none;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h1>Procedimiento de Cambio de Frenos en un Taller Mecánico</h1>
-<p>Guía técnica completa del proceso profesional</p>
+
+<h2>Sonotone G's</h2>
+
+<nav>
+<a onclick="show('inicio')">Inici</a>
+<a onclick="show('empresa')">Empresa</a>
+<a onclick="show('serveis')">Serveis</a>
+<a onclick="show('cita')">Demanar cita</a>
+<a onclick="show('contacte')">Contacte</a>
+</nav>
+
 </header>
 
-<section>
+<!-- INICI -->
 
-<h2>1. Recepción del Vehículo</h2>
+<section id="inicio" class="active">
+
+<h1 style="font-size:60px">Sonotone G's</h1>
+
+<p>Taller mecànic professional</p>
+
+</section>
+
+<!-- EMPRESA -->
+
+<section id="empresa">
+
+<h1>La nostra empresa</h1>
 
 <p>
-Cuando el vehículo llega al taller, el mecánico realiza una inspección inicial del sistema de frenado.
-El cliente puede indicar síntomas como:
-</p>
 
-<ul>
-<li>Ruido al frenar</li>
-<li>Vibración en el volante</li>
-<li>Pedal de freno esponjoso</li>
-<li>Pérdida de eficacia de frenado</li>
-</ul>
+Sonotone G's és un taller mecànic amb una llarga trajectòria dins del sector de l'automoció. 
+Durant anys hem treballat amb l'objectiu d'oferir un servei de qualitat basat en la professionalitat, la confiança i la proximitat amb els nostres clients.
 
-<p>
-Después se revisan visualmente los discos, las pastillas y el estado general del sistema de frenado.
+El nostre equip està format per professionals amb una gran experiència en el diagnòstic, manteniment i reparació de vehicles. 
+Disposem d'eines modernes i sistemes de diagnosi avançats que ens permeten detectar qualsevol incidència amb precisió.
+
+La nostra filosofia és clara: cada vehicle és tractat amb la màxima cura i cada client rep un tracte proper i transparent.
+
 </p>
 
 </section>
 
-<section>
+<!-- SERVEIS -->
 
-<h2>2. Herramientas Utilizadas</h2>
+<section id="serveis">
 
-<ul>
-<li>Elevador hidráulico</li>
-<li>Pistola neumática</li>
-<li>Llaves de vaso</li>
-<li>Llave dinamométrica</li>
-<li>Compresor de pistones de freno</li>
-<li>Limpiador de frenos</li>
-<li>Grasa especial para frenos</li>
-</ul>
+<h1>Serveis</h1>
 
-</section>
+<div class="services">
 
-<section>
-
-<h2>3. Procedimiento Paso a Paso</h2>
-
-<div class="paso">
-<h3>Paso 1: Elevación del vehículo</h3>
-<p>
-El vehículo se eleva en un elevador hidráulico para poder trabajar con seguridad en el sistema de ruedas.
-</p>
+<div class="card" onclick="toggle(this)">
+<h3>Manteniment</h3>
+<p>Revisions completes del vehicle amb canvi d'oli i filtres.</p>
 </div>
 
-<div class="paso">
-<h3>Paso 2: Desmontaje de la rueda</h3>
-<p>
-Se retiran los tornillos de la rueda con una pistola neumática y se desmonta la rueda para acceder al sistema de frenado.
-</p>
+<div class="card" onclick="toggle(this)">
+<h3>Frens</h3>
+<p>Substitució de discs i pastilles de fre.</p>
 </div>
 
-<div class="paso">
-<h3>Paso 3: Extracción de la pinza de freno</h3>
-<p>
-Se desmontan los tornillos de la pinza de freno y se retira cuidadosamente sin dañar el latiguillo de freno.
-</p>
+<div class="card" onclick="toggle(this)">
+<h3>Diagnosi</h3>
+<p>Detecció d'avaries amb equips professionals.</p>
 </div>
 
-<div class="paso">
-<h3>Paso 4: Retirada de las pastillas usadas</h3>
-<p>
-Se extraen las pastillas de freno desgastadas y se inspecciona el desgaste para comprobar si es uniforme.
-</p>
+<div class="card" onclick="toggle(this)">
+<h3>Motor</h3>
+<p>Reparacions mecàniques i manteniment.</p>
 </div>
 
-<div class="paso">
-<h3>Paso 5: Desmontaje del disco de freno</h3>
-<p>
-Si el disco está desgastado o deformado se desmonta retirando el tornillo de fijación.
-</p>
-</div>
-
-<div class="paso">
-<h3>Paso 6: Limpieza del sistema</h3>
-<p>
-Se limpia la zona con limpiador de frenos para eliminar polvo y residuos metálicos.
-</p>
-</div>
-
-<div class="paso">
-<h3>Paso 7: Instalación del disco nuevo</h3>
-<p>
-Se coloca el disco de freno nuevo asegurándolo correctamente al buje de la rueda.
-</p>
-</div>
-
-<div class="paso">
-<h3>Paso 8: Instalación de pastillas nuevas</h3>
-<p>
-Se comprime el pistón de la pinza con una herramienta especial y se colocan las pastillas nuevas.
-</p>
-</div>
-
-<div class="paso">
-<h3>Paso 9: Montaje de la pinza</h3>
-<p>
-Se vuelve a montar la pinza de freno y se aprietan los tornillos con el par de apriete recomendado.
-</p>
-</div>
-
-<div class="paso">
-<h3>Paso 10: Montaje de la rueda</h3>
-<p>
-Se coloca la rueda nuevamente y se aprietan los tornillos con una llave dinamométrica.
-</p>
 </div>
 
 </section>
 
-<section>
+<!-- CITA -->
 
-<h2>4. Piezas Nuevas Instaladas</h2>
+<section id="cita">
 
-<table>
+<h1>Reservar cita</h1>
 
-<tr>
-<th>Componente</th>
-<th>Referencia</th>
-<th>Fabricante</th>
-<th>Descripción</th>
-</tr>
+<form id="formCita">
 
-<tr>
-<td>Pastillas de freno</td>
-<td>BOSCH 0986424794</td>
-<td>Bosch</td>
-<td>Pastillas de freno delanteras con material cerámico para mayor durabilidad.</td>
-</tr>
+<input type="text" id="nom" placeholder="Nom i cognoms" required>
 
-<tr>
-<td>Disco de freno</td>
-<td>BREMBO 09.7011.75</td>
-<td>Brembo</td>
-<td>Disco ventilado de alto rendimiento para mejor disipación de calor.</td>
-</tr>
+<input type="email" id="email" placeholder="Correu electrònic" required>
 
-<tr>
-<td>Tornillos de pinza</td>
-<td>ATE 11.8171-0008</td>
-<td>ATE</td>
-<td>Tornillería de fijación de pinza de freno.</td>
-</tr>
+<input type="text" id="matricula" placeholder="Matrícula vehicle" required>
 
-<tr>
-<td>Sensor de desgaste</td>
-<td>TRW GIC123</td>
-<td>TRW</td>
-<td>Sensor electrónico que detecta el desgaste de las pastillas.</td>
-</tr>
+<input type="date" id="dia" required>
 
-</table>
+<input type="time" id="hora" required>
 
-</section>
+<button type="submit">Confirmar cita</button>
 
-<section>
+</form>
 
-<h2>5. Comprobaciones Finales</h2>
+<div id="confirmacio">
 
-<ul>
-<li>Revisión del nivel del líquido de frenos</li>
-<li>Comprobación del correcto montaje de los componentes</li>
-<li>Prueba de frenado en el taller</li>
-<li>Prueba dinámica en carretera</li>
-</ul>
+<h2>✅ Cita confirmada correctament</h2>
 
-<p>
-Durante los primeros 200 km se recomienda realizar un rodaje de frenos para que las pastillas y los discos se adapten correctamente.
-</p>
+<p>La teva cita ha estat registrada correctament al sistema.</p>
+
+<h3>Resum de la cita:</h3>
+
+<p><strong>Nom:</strong> <span id="rNom"></span></p>
+
+<p><strong>Email:</strong> <span id="rEmail"></span></p>
+
+<p><strong>Matrícula:</strong> <span id="rMatricula"></span></p>
+
+<p><strong>Dia:</strong> <span id="rDia"></span></p>
+
+<p><strong>Hora:</strong> <span id="rHora"></span></p>
+
+</div>
 
 </section>
 
-<footer>
+<!-- CONTACTE -->
 
-<p>Documento técnico – Procedimiento estándar de cambio de frenos en taller mecánico</p>
+<section id="contacte">
 
-</footer>
+<h1>Contacte</h1>
+
+<p>📍 Sonotone G's</p>
+
+<p>📞 600000000</p>
+
+<p>✉ info@sonotonegs.com</p>
+
+</section>
+
+<script>
+
+function show(id){
+
+document.querySelectorAll("section").forEach(sec=>{
+sec.classList.remove("active")
+})
+
+document.getElementById(id).classList.add("active")
+
+}
+
+function toggle(card){
+card.classList.toggle("active")
+}
+
+document.getElementById("formCita").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+let nom=document.getElementById("nom").value
+let email=document.getElementById("email").value
+let matricula=document.getElementById("matricula").value
+let dia=document.getElementById("dia").value
+let hora=document.getElementById("hora").value
+
+document.getElementById("rNom").innerText=nom
+document.getElementById("rEmail").innerText=email
+document.getElementById("rMatricula").innerText=matricula
+document.getElementById("rDia").innerText=dia
+document.getElementById("rHora").innerText=hora
+
+document.getElementById("confirmacio").style.display="block"
+
+})
+
+</script>
 
 </body>
 </html>
